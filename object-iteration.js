@@ -22,28 +22,36 @@ Output:
 const someObject = {
     wheels: 8,
     type: 'truck',
-    goes: 'vroom',
+    goes: 'vroom'
 }
 
 const arrOfObj = Object.keys(someObject);
+arrOfObj.forEach(item)
 ['wheels', 'type', 'goes']
 
 for (let item of arrOfObj) {
+    someObject.wheels
+    someObject['wheels']
+    someObject[item] if item === 'wheels'
+    someObject[item.toUpperCase()]
     console.log(someObject[item]) // first time it's wheels === someObject.wheels
     someObject.wheels = 3;
 }
+arrOfObj.forEach(item => {
+
+})
 */
 
 export function makeMoreScreamingKeys(someObject) {
-    const obj = {};
-    Object.keys(someObject).forEach(key => {
-        someObject.key = ""
-        key.toUpperCase();
-      });
+    const screamingKeys = {}
+    Object.keys(someObject).forEach(keys => {
+        screamingKeys[keys.toUpperCase()] = someObject[keys]
+    })
+    return screamingKeys;
+}
 
-      return obj;
-    }
-
+    
+  
 /*
 Output:
 `8truckvroom`
