@@ -17,10 +17,32 @@ Output:
     GOES: 'vroom',
 }
 */
+/*
+
+const someObject = {
+    wheels: 8,
+    type: 'truck',
+    goes: 'vroom',
+}
+
+const arrOfObj = Object.keys(someObject);
+['wheels', 'type', 'goes']
+
+for (let item of arrOfObj) {
+    console.log(someObject[item]) // first time it's wheels === someObject.wheels
+    someObject.wheels = 3;
+}
+*/
 
 export function makeMoreScreamingKeys(someObject) {
-    return {};
-}
+    const obj = {};
+    Object.keys(someObject).forEach(key => {
+        someObject.key = ""
+        key.toUpperCase();
+      });
+
+      return obj;
+    }
 
 /*
 Output:
